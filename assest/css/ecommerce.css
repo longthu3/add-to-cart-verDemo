@@ -1,0 +1,118 @@
+body {
+  background-color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+}
+
+#auth-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#form {
+  display: flex;
+  background-color: white;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#form-login,
+#form-sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+#form-login input,
+#form-sign-up input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+}
+
+#form-login input:focus,
+#form-sign-up input:focus {
+  outline: none;
+}
+
+#form-login input::placeholder,
+#form-sign-up input::placeholder {
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+}
+
+#form-login button,
+#form-sign-up button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ff6f61;
+  color: white;
+  font-weight: bold;
+}
+
+#form-login button:hover,
+#form-sign-up button:hover {
+  background-color: #cc594e;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+#form-sign-up-redirect,
+#form-login-redirect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  background-color: #ed325e;
+  height: 400px;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+#form-sign-up-redirect h3,
+#form-login-redirect h3 {
+  color: white;
+}
+
+#form-sign-up-redirect p,
+#form-login-redirect p {
+  font-size: 14px;
+}
+
+#form-sign-up-redirect button,
+#form-login-redirect button {
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid #ff6f61;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}

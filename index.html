@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./assest/css/global.css">
+    <link rel="stylesheet" href="./assest/css/ecommerce.css">
+</head>
+
+<body>
+    <div id="auth-form">
+        <div id="form">
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('#form');
+        let result = ``;
+
+        const changeSignUp = () => {
+            result = `<div class="form-content">
+                <div id="form-sign-up">
+                    <h3>Sign up</h3>
+                    <input type="text" name="email-signUp" placeholder="email" id="email-signUp">
+                    <input type="password" name="password-signUp" placeholder="password" id="password-signUp">
+                    <button onclick="signUp()">Sign up</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <div id="form-login-redirect">
+                    <h3>Welcome back !</h3>
+                    <p>To keep connected with us please login with your personal info.</p>
+                    <button onclick="changeLogin()">Sign in</button>
+                </div>
+            </div>`
+            form.innerHTML = result;
+        }
+
+        const changeLogin = () => {
+            result = `<div class="form-content">
+                <div id="form-login">
+                    <h3>Sign in</h3>
+                    <input type="text" name="email" placeholder="email" id="email-login">
+                    <input type="password" name="password" placeholder="password" id="password-login">
+                    <button onclick="login()">Sign in</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <div id="form-sign-up-redirect">
+                    <h3>Hello, friend !</h3>
+                    <p>Enter your personal detail and start buying product.</p>
+                    <button onclick="changeSignUp()">Sign up</button>
+                </div>
+            </div>`
+            form.innerHTML = result;
+        }
+
+        changeLogin();
+    </script>
+
+    <script type="module" src="./assest/js/auth.js"></script>
+</body>
+
+</html>

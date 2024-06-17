@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+</head>
+
+<body>
+    <div id="content">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <h3>List of product</h3>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <h3 id="user"></h3>
+                <button
+                    style="width: 80px; height: 20px; cursor: pointer; text-transform: uppercase; font-weight: bold;"
+                    onclick="logout()">log out</button>
+            </div>
+        </div>
+
+        <!-- list show products -->
+        <table id="list-product" border="1" style="width: 100%;">
+
+        </table>
+
+        <h3>My Cart</h3>
+
+        <!-- list total -->
+        <table id="list-cart" border="1" style="width: 100%;">
+
+        </table>
+
+        <button style="margin-top: 20px;" type="button" onclick="deleteCart()">Delete all cart</button>
+    </div>
+
+    <script src="../js/shoppingPage.js" type="module"></script>
+    <script>
+        const logout = () => {
+            localStorage.removeItem('user');
+            window.location.href = '/index.html';
+        }
+    </script>
+</body>
+
+</html>
